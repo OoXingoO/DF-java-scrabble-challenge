@@ -2,7 +2,11 @@ import java.util.HashMap;
 
 public class Scrabble {
     private String word;
-    private int score;
+    private Character[] doubleLetters;
+    private Character[] tripleLetters;
+
+    private boolean doubleWord;
+    private boolean tripeWord;
     private final char[] oneScoreLetters = {'a', 'e', 'i', 'o', 'u', 'l', 'n', 'r', 's', 't'};
     private final char[] twoScoreLetters = {'d', 'g'};
     private final char[] threeScoreLetters = {'b', 'c', 'm', 'p'};
@@ -10,6 +14,7 @@ public class Scrabble {
     private final char[] fiveScoreLetters = {'k'};
     private final char[] eightScoreLetters = {'j', 'x'};
     private final char[] tenScoreLetters = {'q', 'z'};
+    private int score;
     private HashMap<Character, Integer> letterScores = new HashMap<>();
 
     public Scrabble(String word) {
@@ -21,6 +26,19 @@ public class Scrabble {
         }
     }
 
+    public Scrabble(String word, Character[] doubleLetters, Character[] tripleLetters, boolean doubleWord, boolean tripeWord) {
+        if (word == null) {
+            this.word = " ";
+        } else {
+            this.word = word.toLowerCase();
+            this.doubleLetters = doubleLetters;
+            this.tripleLetters = tripleLetters;
+            this.doubleWord = doubleWord;
+            this.tripeWord = tripeWord;
+            calculateLetterScores();
+        }
+    }
+
     public int score() {
         for(int i = 0; i < this.word.length(); i++) {
             for(HashMap.Entry<Character, Integer> entry : letterScores.entrySet()) {
@@ -28,6 +46,12 @@ public class Scrabble {
                     score += entry.getValue();
                 }
             }
+        }
+        if(this.doubleWord) {
+            score *= 2;
+        }
+        if(this.tripeWord) {
+            score *= 3;
         }
         return score;
     }
