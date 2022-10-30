@@ -1,30 +1,24 @@
-# Scrabble Challenge - this time in Java!
+# Java Scrabble Challenge
 
-Welcome to the Scrabble challenge!
 
-## Learning Objectives
-- Build a simple program using functions, loops, and flow control
-- Use `git` & GitHub to commit work and open a Pull Request
+# 🅂🄲🅁🄰🄱🄱🄻🄴
 
-## Instructions
 
-1. Fork this repository and then clone your copy:
-```sh
-$ git clone <YOUR GITHUB DETAILS>/scrabble-challenge.git && cd scrabble-challenge
-```
-2. Run the tests from IntelliJ. There should be a failing test to begin with. You can run your test suite in a few ways:
+## About the challenge
+Using Java, build a simple scrabble program using functions, loops, and flow control
+
+### Steps performed
+
+1. Forked repository and then cloned my own copy:
+2. Run the tests from IntelliJ. There were a number of ways to run the test suite:
    1. Right-click on the project and then select `Run all Tests`
    2. Right-click on the `ScrabbleTest` and click `Run ScrabbleTest`
    3. Open the class file `ScrabbleTest` and click the "Play" button to the left of the class declaration
 
-Your first error when running the tests should be this:
+3. In GitHub, opened a pull request from your forked repository to the challenge repository.
+4. Implemented the criteria below locally and pushed my code to my repository.
 
-![Initial Error](images/InitialError.png)
-
-3. In GitHub, [open a Pull Request](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request) from your forked repository to the challenge repository.
-4. Implement the criteria below locally and [push your code](https://docs.github.com/en/github/managing-files-in-a-repository/adding-a-file-to-a-repository-using-the-command-line) to your repository! Every push to a branch that has an open Pull Request will update it automatically with your changes.
-
-# Task
+## Task requirements
 
 Given a word, compute the scrabble score for that word.
 
@@ -96,3 +90,12 @@ class ScrabbleRunner {
 > You can play a double or a triple letter.
 
 > You can play a double or a triple word.
+
+## Self-review
+### What have I learnt
+* Better grips with using Java and experimented with various concepts such as final keyword, overloading and enhanced for() loops etc.
+* Performing test-driven development using the JUnit testing framework.
+* Exploring with Hashmap to store key/value pairs.
+### Areas to improve on
+* Cutting down methods to no more than 5 lines & contain no more than 5 operations.
+* Using domain modelling as part of test driven development.
