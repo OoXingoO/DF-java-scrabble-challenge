@@ -36,24 +36,42 @@ public class Scrabble {
             this.doubleWord = doubleWord;
             this.tripeWord = tripeWord;
             calculateLetterScores();
+            doubleLetterScores();
+            tripleLetterScores();
         }
     }
 
     public int score() {
-        for(int i = 0; i < this.word.length(); i++) {
-            for(HashMap.Entry<Character, Integer> entry : letterScores.entrySet()) {
-                if(this.word.charAt(i) == entry.getKey()) {
+        for (int i = 0; i < this.word.length(); i++) {
+            for (HashMap.Entry<Character, Integer> entry : letterScores.entrySet()) {
+                if (this.word.charAt(i) == entry.getKey()) {
                     score += entry.getValue();
                 }
             }
         }
-        if(this.doubleWord) {
+        if (this.doubleWord) {
             score *= 2;
         }
-        if(this.tripeWord) {
+        if (this.tripeWord) {
             score *= 3;
         }
         return score;
+    }
+
+    private void doubleLetterScores() {
+        if (this.doubleLetters != null) {
+            for (Character c: this.doubleLetters) {
+                score += letterScores.get(Character.toLowerCase(c));
+            }
+        }
+    }
+
+    private void tripleLetterScores() {
+        if (this.tripleLetters != null) {
+            for (Character c: this.tripleLetters) {
+                score += letterScores.get(Character.toLowerCase(c)) * 2;
+            }
+        }
     }
 
     private void calculateLetterScores() {
