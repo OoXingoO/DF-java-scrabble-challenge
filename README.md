@@ -1,11 +1,11 @@
-# Java Scrabble Challenge
-
+DF Java Scrabble Challenge
+=================
 
 # 🅂🄲🅁🄰🄱🄱🄻🄴
 
-
-## About the challenge
-Using Java, build a simple scrabble program using functions, loops, and flow control
+About the project
+-------
+Using Java, build a simple scrabble program using functions, loops, and flow control.
 
 ### Steps performed
 
@@ -15,8 +15,13 @@ Using Java, build a simple scrabble program using functions, loops, and flow con
    2. Right-click on the `ScrabbleTest` and click `Run ScrabbleTest`
    3. Open the class file `ScrabbleTest` and click the "Play" button to the left of the class declaration
 
-3. In GitHub, opened a pull request from your forked repository to the challenge repository.
+3. In GitHub, opened a pull request from forked repository to the challenge repository.
 4. Implemented the criteria below locally and pushed my code to my repository.
+
+Built with
+-------
+![java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white)
+![intelliJ](https://img.shields.io/badge/IntelliJ_IDEA-000000.svg?style=for-the-badge&logo=intellij-idea&logoColor=white)
 
 ## Task requirements
 
@@ -53,7 +58,7 @@ And to total:
 = 14
 ```
 
-## Acceptance Criteria
+### Acceptance Criteria
 
 ```java
 
@@ -83,19 +88,20 @@ class ScrabbleRunner {
    }
 }
 ```
-
-## Extended Acceptance Criteria
+### Extended Acceptance Criteria
 > Each `Scrabble` method should be no more than 5 lines and contain no more than 5 operations.
 
 > You can play a double or a triple letter.
 
 > You can play a double or a triple word.
 
-## Self-review
-### What have I learnt
+Self-review
+-------
+#### What have I learnt
 * Better grips with using Java and experimented with various concepts such as final keyword, overloading and enhanced for() loops etc.
 * Performing test-driven development using the JUnit testing framework.
 * Exploring with Hashmap to store key/value pairs.
-### Areas to improve on
+
+#### Areas to improve on
 * Cutting down methods to no more than 5 lines & contain no more than 5 operations.
 * Using domain modelling as part of test driven development.
